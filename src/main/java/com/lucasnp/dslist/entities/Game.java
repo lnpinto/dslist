@@ -1,4 +1,4 @@
-package com.lucasnp.dslist;
+package com.lucasnp.dslist.entities;
 
 import jakarta.persistence.*;
 
