@@ -2,7 +2,7 @@
 
 ## Overview
 
-DSList is a RESTful API built using Java and the Spring Framework. This API provides functionalities to manage and interact with a list of items, which could be games, movies, or any other type of data. The project is designed to be scalable, maintainable, and easy to integrate with other systems.
+DSList is a RESTful API built using Java and the Spring Framework. This API provides functionalities to manage and interact with a list of items, which in this case is a list of games, but can be of movies, or any other type of data. The project is designed to be scalable, maintainable, and easy to integrate with other systems.
 
 ## Features
 
@@ -66,22 +66,24 @@ DSList is a RESTful API built using Java and the Spring Framework. This API prov
 
 ### Items
 
-- **GET /items**: Retrieve all items.
-- **GET /items/{id}**: Retrieve a specific item by ID.
-- **POST /items**: Create a new item.
-- **PUT /items/{id}**: Update an existing item.
-- **DELETE /items/{id}**: Delete an item.
+- **GET /games**: Retrieve all items.
+- **GET /games/{id}**: Retrieve a specific item by ID.
+- **GET /lists**: Retrieve a specific list.
+- **GET /lists/{id}/games**: Retrieve games from a specific list by ID.
+- **POST /games**: Create a new item.
+- **PUT /games/{id}**: Update an existing item.
+- **DELETE /games/{id}**: Delete an item.
 
 ### Example Requests
 
 - **Get All Items**:
   ```bash
-  curl -X GET http://localhost:8080/items
+  curl -X GET http://localhost:8080/games
   ```
 
 - **Create a New Item**:
   ```bash
-  curl -X POST http://localhost:8080/items -H "Content-Type: application/json" -d '{"name": "New Item", "description": "This is a new item"}'
+  curl -X POST http://localhost:8080/games -H "Content-Type: application/json" -d '{"name": "New Item", "description": "This is a new item"}'
   ```
 
 ## Contributing
